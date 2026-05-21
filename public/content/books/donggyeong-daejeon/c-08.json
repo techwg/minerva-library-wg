@@ -1,0 +1,54 @@
+{
+  "bookId": "donggyeong-daejeon",
+  "chapterId": "c-08",
+  "bookTitle": "동경대전",
+  "bookOriginal": "東經大全",
+  "author": "최제우(崔濟愚)",
+  "persona": "choejeu",
+  "palette": "vermilion",
+  "number": "제 8 편",
+  "chapterLabel": "강령주문해",
+  "title": "강령주문해",
+  "titleOriginal": "강령주문해",
+  "originalLang": "한문·한국어 혼용",
+  "originalLangCode": "ko-hanja",
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "漢文"
+    },
+    {
+      "code": "ko",
+      "label": "한국어"
+    }
+  ],
+  "sourceCredit": "wikisource:ko 등 · 천도교 PD/CC",
+  "breadcrumb": [
+    "동경대전",
+    "제 8 편",
+    "강령주문해"
+  ],
+  "intro": "",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "original": "立春詩 (입춘시)",
+      "ko": ""
+    },
+    {
+      "id": "p2",
+      "original": "道氣長存邪不入\n도기장존사불입\n世間衆人不同歸 \n세간중인부동귀",
+      "ko": ""
+    },
+    {
+      "id": "p3",
+      "original": "",
+      "ko": "도의 기운을 길이 보존함에 사특한 것이 들어오지 못하고,"
+    },
+    {
+      "id": "p4",
+      "original": "",
+      "ko": "세간의 뭇사람과 같이 돌아가지 않으리라."
+    }
+  ]
+}

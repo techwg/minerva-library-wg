@@ -1,0 +1,89 @@
+{
+  "bookId": "donggyeong-daejeon",
+  "chapterId": "c-09",
+  "bookTitle": "동경대전",
+  "bookOriginal": "東經大全",
+  "author": "최제우(崔濟愚)",
+  "persona": "choejeu",
+  "palette": "vermilion",
+  "number": "제 9 편",
+  "chapterLabel": "시천주의",
+  "title": "시천주의",
+  "titleOriginal": "시천주의",
+  "originalLang": "한문·한국어 혼용",
+  "originalLangCode": "ko-hanja",
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "漢文"
+    },
+    {
+      "code": "ko",
+      "label": "한국어"
+    }
+  ],
+  "sourceCredit": "wikisource:ko 등 · 천도교 PD/CC",
+  "breadcrumb": [
+    "동경대전",
+    "제 9 편",
+    "시천주의"
+  ],
+  "intro": "",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "original": "絶句 (절구)",
+      "ko": ""
+    },
+    {
+      "id": "p2",
+      "original": "河淸鳳鳴孰能知",
+      "ko": ""
+    },
+    {
+      "id": "p3",
+      "original": "",
+      "ko": "하청봉명숙능지\n황하수 맑아지고 봉황새 우는 것을 누가 능히 알 것인가."
+    },
+    {
+      "id": "p4",
+      "original": "運自何方吾不知 \n운자하방오부지",
+      "ko": ""
+    },
+    {
+      "id": "p5",
+      "original": "운수가 어느 곳으로부터 오는지를 내 알지 못하노라.\n平生受命千年運 \n평생수명천년운",
+      "ko": ""
+    },
+    {
+      "id": "p6",
+      "original": "평생에 받은 천명은 천년 운수요\n聖德家承百世業",
+      "ko": ""
+    },
+    {
+      "id": "p7",
+      "original": "",
+      "ko": "성덕가승백세업\n성덕의 우리 집안은 백세의 업을 계승 하였네."
+    },
+    {
+      "id": "p8",
+      "original": "龍潭水流四海源",
+      "ko": ""
+    },
+    {
+      "id": "p9",
+      "original": "",
+      "ko": "용담수류사해원"
+    },
+    {
+      "id": "p10",
+      "original": "용담의 물이 흘러 네 바다의 근원이요 \n龜岳春回一世花",
+      "ko": ""
+    },
+    {
+      "id": "p11",
+      "original": "",
+      "ko": "구악춘회일세화\n구미산에 봄이 오니 온 세상이 꽃이로다."
+    }
+  ]
+}
