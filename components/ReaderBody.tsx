@@ -187,19 +187,19 @@ export function ReaderBody({
                   </div>
                 )}
 
-                {/* 2단: 원문 + 국역 */}
+                {/* 2단: 원문 + 국역 — whitespace-pre-line으로 운문 줄바꿈 보존 */}
                 {showOrig && p.original ? (
                   <div className="grid grid-cols-[1fr_1fr] gap-6">
-                    <div style={originalStyle(origLang, fontSize)}>
+                    <div className="whitespace-pre-line" style={originalStyle(origLang, fontSize)}>
                       {origLang === "english" && p.originalEn ? p.originalEn : p.original}
                     </div>
-                    <div>{p.ko || <span className="text-ink-300 italic">번역 준비 중</span>}</div>
+                    <div className="whitespace-pre-line">{p.ko || <span className="text-ink-300 italic">번역 준비 중</span>}</div>
                   </div>
                 ) : p.ko ? (
-                  <div>{p.ko}</div>
+                  <div className="whitespace-pre-line">{p.ko}</div>
                 ) : (
                   /* 한국어 번역이 없는 한문/외국어 단독 책 → 원문을 메인으로 표시 */
-                  <div style={originalStyle(chapter.originalLangCode, fontSize)}>{p.original}</div>
+                  <div className="whitespace-pre-line" style={originalStyle(chapter.originalLangCode, fontSize)}>{p.original}</div>
                 )}
 
                 {/* 문단 하이라이트 표시 (명언) */}
