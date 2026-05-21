@@ -1,0 +1,415 @@
+/* 나눔스퀘어 네오 (NanumSquare Neo) — 단일 폰트 통일 */
+/* CDN 제공: cdnfonts.com */
+@import url('https://fonts.cdnfonts.com/css/nanumsquare-neo');
+/* 📖 도서관 — 서양 원전(그리스·라틴·영어) 표시용 */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Cardo:ital,wght@0,400;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #fdfbf5;
+  --color-fg: #2a261d;
+  --color-muted: #6b6048;
+  --color-accent: #a88632;
+  --color-border: #d9d3c3;
+}
+
+html {
+  height: 100%;
+  /* iOS Safari 가로 스와이프 시 뒤로가기 방지 및 안정성 */
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: 'NanumSquare Neo', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  /* 가로 스크롤 차단 — 모바일에서 뷰포트 넘침 방지 */
+  overflow-x: hidden;
+}
+
+/* iOS Safe Area — 노치·홈인디케이터 대응 */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-x {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* iOS에서 input/textarea 포커스 시 자동 확대 방지 — 최소 16px */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* 터치 타겟 접근성 — 최소 44×44 (Apple HIG) */
+@media (pointer: coarse) {
+  button, a[role="button"], .touch-target {
+    min-height: 44px;
+  }
+}
+
+/* 기존 .serif 클래스 호환 유지 — 제목·강조용으로 NanumSquare Neo Heavy 적용 */
+.serif {
+  font-family: 'NanumSquare Neo', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* 선택 영역 */
+::selection {
+  background-color: #f3ead0;
+  color: #2a261d;
+}
+
+/* 스크롤바 (Webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #faf5e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9d3c3;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8ae97;
+}
+
+/* 스트리밍 커서 */
+.streaming-cursor::after {
+  content: '▊';
+  display: inline-block;
+  animation: blink 1s steps(2) infinite;
+  color: #a88632;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Prose 스타일 (원전 인용 등) */
+.prose-quote {
+  font-family: 'Nanum Myeongjo', serif;
+  font-style: italic;
+  border-left: 3px solid #c9ad5f;
+  padding-left: 1rem;
+  color: #504737;
+  line-height: 1.85;
+}
+
+/* 캡션·메타 정보 — 가는 웨이트로 위계 강화 */
+.caption {
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #807659;
+}
+
+/* Toast 등장 애니메이션 */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-toast-in {
+  animation: toast-in 0.2s ease-out;
+}
+
+/* 부드러운 스크롤 시 헤더 그림자 */
+.header-scrolled {
+  box-shadow: 0 1px 3px rgba(42, 38, 29, 0.06);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   📖 미네르바 도서관 (Library) 전용 토큰·클래스
+   /library/* 라우트에서만 사용. 본 플랫폼은 영향 없음.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Parchment — 본문 배경 (off-white, 절대 #FFF 쓰지 말 것) */
+  --parchment-0:   #FFFCF4;
+  --parchment-50:  #FBF7EC;
+  --parchment-100: #F5EFDD;
+  --parchment-200: #ECE2C5;
+  --parchment-300: #DECDA0;
+
+  /* Ink — 본문/제목 글자 */
+  --ink-900: #1A1812;
+  --ink-800: #2A2520;
+  --ink-700: #3F3A30;
+  --ink-600: #57503F;
+  --ink-500: #756B54;
+  --ink-400: #948870;
+  --ink-300: #B5A988;
+
+  /* Clay — 따뜻한 중성 */
+  --clay-25:  #FAF7F1;
+  --clay-50:  #F4EFE3;
+  --clay-100: #E8DFCB;
+  --clay-200: #D8C9A8;
+  --clay-300: #B8A57E;
+  --clay-600: #6B5A3D;
+  --clay-700: #4A3D29;
+  --clay-800: #2E2618;
+  --clay-900: #1A1610;
+
+  /* Persimmon — Onjeong primary (★ family signal) */
+  --persimmon-500: #F26522;
+  --persimmon-600: #C5491A;
+
+  /* Vermilion 朱漆 */
+  --vermilion-50:  #FBECE2;
+  --vermilion-100: #F4CDB6;
+  --vermilion-200: #E29D7A;
+  --vermilion-300: #C56A44;
+  --vermilion-400: #A24420;
+  --vermilion-500: #842F14;
+  --vermilion-600: #67200B;
+  --vermilion-700: #471407;
+
+  /* Gold */
+  --gold-50:  #FAF3DD;
+  --gold-100: #F1E2A5;
+  --gold-200: #E2C870;
+  --gold-300: #C9A53F;
+  --gold-400: #A8821C;
+  --gold-500: #836510;
+  --gold-600: #5D4708;
+
+  /* Jade */
+  --jade-600: #2B7A4B;
+
+  --book-accent:        #a8821c;
+  --book-accent-soft:   #f1e2a5;
+  --book-accent-deep:   #5d4708;
+  --book-accent-page:   #fff8e1;
+  --book-cover-bg:      #2b2418;
+  --book-cover-spine:   #1c1710;
+  --bg-reader:          #fbf7ec;
+  --text-reader:        #2a2520;
+  --reader-base-fs:     19px;
+  --reader-lh:          1.85;
+  --reader-max-w:       760px;
+  --ease-out:           cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring:        cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:           120ms;
+  --dur-base:           200ms;
+  --dur-slow:           320ms;
+
+  --shadow-sm: 0 1px 2px rgba(42,34,23,0.06), 0 1px 1px rgba(42,34,23,0.04);
+  --shadow-md: 0 2px 4px rgba(42,34,23,0.05), 0 4px 12px -2px rgba(42,34,23,0.10);
+  --shadow-lg: 0 8px 24px -4px rgba(42,34,23,0.18);
+  --shadow-xl: 0 24px 60px -16px rgba(42,34,23,0.30), 0 8px 16px rgba(42,34,23,0.10);
+  --shadow-glow: 0 0 0 4px rgba(242,101,34,0.18);
+}
+
+.palette-vermilion {
+  --book-accent:       #842f14;
+  --book-accent-soft:  #f4cdb6;
+  --book-accent-deep:  #471407;
+  --book-accent-page:  #fbece2;
+  --book-cover-bg:     #842f14;
+  --book-cover-spine:  #471407;
+}
+.palette-gold {
+  --book-accent:       #a8821c;
+  --book-accent-soft:  #f1e2a5;
+  --book-accent-deep:  #5d4708;
+  --book-accent-page:  #fff8e1;
+  --book-cover-bg:     #2b2418;
+  --book-cover-spine:  #1c1710;
+}
+
+.font-heavy { font-weight: 900; }
+
+/* 외국어 원전 글꼴 */
+.text-original-greek,
+.text-original-latin {
+  font-family: "Cardo", "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0.005em;
+}
+.text-original-english {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  letter-spacing: 0.005em;
+}
+.text-original-hanja { letter-spacing: 0.04em; }
+
+/* 리더 본문 */
+.reader-body {
+  font-size: var(--reader-base-fs);
+  line-height: var(--reader-lh);
+  color: var(--text-reader);
+  background: var(--bg-reader);
+}
+.reader-body.fs-16 { font-size: 16px; }
+.reader-body.fs-19 { font-size: 19px; }
+.reader-body.fs-22 { font-size: 22px; }
+.reader-body.fs-26 { font-size: 26px; }
+
+/* 인용 블록 */
+.quote-block {
+  border-left: 4px solid var(--book-accent);
+  background: var(--book-accent-soft);
+  padding: 14px 18px;
+  border-radius: 0 12px 12px 0;
+  color: #2a2520;
+  font-weight: 400;
+  opacity: 0.9;
+}
+.quote-block .src {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #57503f;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Pill */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px; font-weight: 700;
+  background: #f5efdd;
+  color: #3f3a30;
+  border: 1px solid #ece2c5;
+  white-space: nowrap;
+}
+.pill-gold      { background: #faf3dd; color: #5d4708; border-color: #f1e2a5; }
+.pill-vermilion { background: #fbece2; color: #67200b; border-color: #f4cdb6; }
+.pill-accent    { background: var(--book-accent-soft); color: var(--book-accent-deep); border-color: var(--book-accent); }
+
+/* 인장 */
+.seal {
+  display: inline-grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  background: var(--book-accent);
+  color: #fff;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 3px var(--book-accent);
+  transform: rotate(-3deg);
+  text-align: center;
+}
+
+/* 단락 하이라이트 */
+.paragraph-highlighted {
+  background: linear-gradient(to right, var(--book-accent-soft), transparent);
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+/* 인용 링크 */
+.citation-link {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--book-accent-deep);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: 0.02em;
+}
+.citation-link:hover { color: var(--book-accent); }
+
+/* 목차 dot leader */
+.dot-leader {
+  flex: 1;
+  border-bottom: 1px dotted #b8ae97;
+  margin: 0 6px;
+  transform: translateY(-4px);
+}
+
+/* ── Reader 몰입 모드 (v0.2) ─────────────────────────────── */
+.reader-immersive { background: var(--parchment-50); color: var(--text-reader); }
+
+@keyframes ai-blink { to { opacity: 0; } }
+.ai-cursor {
+  display: inline-block; width: 7px; height: 1.05em;
+  background: var(--book-accent); vertical-align: -2px; margin-left: 2px;
+  animation: ai-blink 1s steps(2,end) infinite;
+}
+.ai-dot { animation: ai-blink 1.4s ease-in-out infinite; }
+
+@keyframes page-slide-in-right {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes page-slide-in-left {
+  from { transform: translateX(-40px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+.page-slide-right { animation: page-slide-in-right 320ms var(--ease-out); }
+.page-slide-left  { animation: page-slide-in-left 320ms var(--ease-out); }
+
+/* 한자 hover 글로스 — 검정 툴팁 */
+.hanja-gloss-trigger {
+  position: relative;
+  border-bottom: 1px dotted var(--book-accent);
+  cursor: help;
+}
+.hanja-gloss-trigger:hover {
+  color: var(--book-accent-deep);
+  background: var(--book-accent-soft);
+}
+.hanja-gloss-trigger:hover .hanja-gloss-tip { opacity: 1; transform: translate(-50%, -110%); pointer-events: none; }
+.hanja-gloss-tip {
+  position: absolute; left: 50%; top: -8px;
+  transform: translate(-50%, -100%) scale(0.95);
+  background: var(--ink-900); color: var(--parchment-50);
+  padding: 8px 12px; border-radius: 10px;
+  font-size: 12px; font-weight: 600; line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px -6px rgba(0,0,0,0.4);
+  opacity: 0; transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+  pointer-events: none; z-index: 30;
+}
+.hanja-gloss-tip::after {
+  content: ""; position: absolute; left: 50%; bottom: -4px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px; height: 8px; background: var(--ink-900);
+}
+.hanja-gloss-tip .reading { color: var(--gold-200); font-weight: 900; font-size: 13px; margin-right: 6px; }
+.hanja-gloss-tip .meaning { color: var(--clay-200); font-size: 10.5px; font-weight: 500; }
+
+/* 종이 질감 (procedurally via SVG, applied as ::before bg-image) */
+.paper-grain::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0.16  0 0 0 0 0.13  0 0 0 0 0.09  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.05; mix-blend-mode: multiply;
+}
+
+/* 본문 드래그 floating context menu */
+.selection-menu {
+  position: fixed; z-index: 60;
+  background: var(--ink-900); color: var(--parchment-50);
+  border-radius: 12px; padding: 4px;
+  display: flex; gap: 2px;
+  box-shadow: 0 12px 28px -4px rgba(0,0,0,0.4);
+}
+.selection-menu button {
+  background: transparent; color: inherit; border: none;
+  padding: 8px 12px; border-radius: 8px;
+  font-size: 12px; font-weight: 800; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.selection-menu button:hover { background: rgba(255,255,255,0.1); }

@@ -1,0 +1,64 @@
+{
+  "bookId": "donggyeong-daejeon",
+  "chapterId": "c-07",
+  "bookTitle": "동경대전",
+  "bookOriginal": "東經大全",
+  "author": "최제우(崔濟愚)",
+  "persona": "choejeu",
+  "palette": "vermilion",
+  "number": "제 7 편",
+  "chapterLabel": "본주문",
+  "title": "본주문",
+  "titleOriginal": "본주문",
+  "originalLang": "한문·한국어 혼용",
+  "originalLangCode": "ko-hanja",
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "漢文"
+    },
+    {
+      "code": "ko",
+      "label": "한국어"
+    }
+  ],
+  "sourceCredit": "wikisource:ko 등 · 천도교 PD/CC",
+  "breadcrumb": [
+    "동경대전",
+    "제 7 편",
+    "본주문"
+  ],
+  "intro": "",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "original": "呪文 (주문)",
+      "ko": ""
+    },
+    {
+      "id": "p2",
+      "original": "先生呪文",
+      "ko": ""
+    },
+    {
+      "id": "p3",
+      "original": "降靈呪文 :   至氣今至四月來",
+      "ko": ""
+    },
+    {
+      "id": "p4",
+      "original": "강령주문 :   \n지기금지사월래\n本 呪 文 :    侍天主令我長生無窮無窮萬事知\n본 주 문 :    \n시천주영아장생무궁무궁만사지",
+      "ko": ""
+    },
+    {
+      "id": "p5",
+      "original": "弟子呪文",
+      "ko": ""
+    },
+    {
+      "id": "p6",
+      "original": "初學呪文 :   爲 天主顧我情永世不忘萬事宜\n초학주문 :   \n위 천주고아정영세불망만사의 \n降靈呪文 :   至氣今至願爲大 降\n강령주문 :   \n지기금지원위대 강\n本 呪 文 :   侍 天主造化定永世不忘萬事知\n본 주 문 :   \n시 천주조화정영세불망만사지",
+      "ko": ""
+    }
+  ]
+}

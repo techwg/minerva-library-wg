@@ -1,0 +1,39 @@
+{
+  "bookId": "yongdam-yusa",
+  "chapterId": "c-09",
+  "bookTitle": "용담유사",
+  "bookOriginal": "龍潭遺詞",
+  "author": "최제우(崔濟愚)",
+  "persona": "choejeu",
+  "palette": "vermilion",
+  "number": "제 9 편",
+  "chapterLabel": "(부) 검결",
+  "title": "(부) 검결",
+  "titleOriginal": "(부) 검결",
+  "originalLang": "한문·한국어 혼용",
+  "originalLangCode": "ko-hanja",
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "漢文"
+    },
+    {
+      "code": "ko",
+      "label": "한국어"
+    }
+  ],
+  "sourceCredit": "wikisource:ko 등 · 천도교 PD/CC",
+  "breadcrumb": [
+    "용담유사",
+    "제 9 편",
+    "(부) 검결"
+  ],
+  "intro": "",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "original": "",
+      "ko": "(부) 검결\n시호시호   이내시호   부재래지   시호로다\n만세일지   장부로서   오만년지   시호로다\n용천검   드는칼을   아니쓰고   무엇하리\n무수장삼   떨쳐입고   이칼저칼   넌즛들어\n호호망망   넓은천지   일신으로   비껴서서\n칼노래   한곡조를   시호시호   불러내니\n용천검   날랜칼은   일월을   희롱하고\n게으른   무수장삼   우주에   덮여있네\n만고명장   어디있나   장부당전   무장사라\n좋을시고   좋을시고   이내신명   좋을시고"
+    }
+  ]
+}

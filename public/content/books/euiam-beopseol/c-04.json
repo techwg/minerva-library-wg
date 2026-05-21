@@ -1,0 +1,169 @@
+{
+  "bookId": "euiam-beopseol",
+  "chapterId": "c-04",
+  "bookTitle": "의암법설",
+  "bookOriginal": "義庵法說",
+  "author": "손병희(孫秉熙) 외",
+  "persona": "choejeu",
+  "palette": "vermilion",
+  "number": "제 4 편",
+  "chapterLabel": "4. 十三觀法(십삼관법)",
+  "title": "4. 十三觀法(십삼관법)",
+  "titleOriginal": "4. 十三觀法(십삼관법)",
+  "originalLang": "한문·한국어 혼용",
+  "originalLangCode": "ko-hanja",
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "漢文"
+    },
+    {
+      "code": "ko",
+      "label": "한국어"
+    }
+  ],
+  "sourceCredit": "wikisource:ko 등 · 천도교 PD/CC",
+  "breadcrumb": [
+    "의암법설",
+    "제 4 편",
+    "4. 十三觀法(십삼관법)"
+  ],
+  "intro": "",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "original": "4. 十三觀法(십삼관법)",
+      "ko": ""
+    },
+    {
+      "id": "p2",
+      "original": "1. 念呪觀 感化觀",
+      "ko": ""
+    },
+    {
+      "id": "p3",
+      "original": "",
+      "ko": "주문을 생각하여 보는 것과 감화함을 보는 것"
+    },
+    {
+      "id": "p4",
+      "original": "2. 我無觀 天有觀",
+      "ko": ""
+    },
+    {
+      "id": "p5",
+      "original": "",
+      "ko": "나를 없다고 보고 한울을 있다고 보는 것"
+    },
+    {
+      "id": "p6",
+      "original": "3. 我有觀 天無觀",
+      "ko": ""
+    },
+    {
+      "id": "p7",
+      "original": "",
+      "ko": "나를 있다고 보고 한울을 없다고 보는 것"
+    },
+    {
+      "id": "p8",
+      "original": "4. 性無觀 心有觀",
+      "ko": ""
+    },
+    {
+      "id": "p9",
+      "original": "",
+      "ko": "성품을 없다고 보고 마음을 있다고 보는 것"
+    },
+    {
+      "id": "p10",
+      "original": "5. 心無觀 性有觀",
+      "ko": ""
+    },
+    {
+      "id": "p11",
+      "original": "",
+      "ko": "마음을 없다고 보고 성품을 있다고 보는 것"
+    },
+    {
+      "id": "p12",
+      "original": "6. 性無觀 心無觀",
+      "ko": ""
+    },
+    {
+      "id": "p13",
+      "original": "",
+      "ko": "성품도 없다고 보고 마음도 없다고 보는 것"
+    },
+    {
+      "id": "p14",
+      "original": "7. 性有觀 心有觀",
+      "ko": ""
+    },
+    {
+      "id": "p15",
+      "original": "",
+      "ko": "성품도 있다고 보고 마음도 있다고 보는 것"
+    },
+    {
+      "id": "p16",
+      "original": "8. 我先觀 天後觀",
+      "ko": ""
+    },
+    {
+      "id": "p17",
+      "original": "",
+      "ko": "나를 먼저 보고 한울을 뒤에 보는 것"
+    },
+    {
+      "id": "p18",
+      "original": "9. 我有觀 天有觀",
+      "ko": ""
+    },
+    {
+      "id": "p19",
+      "original": "",
+      "ko": "나도 있다고 보고 한울도 있다고 보는 것"
+    },
+    {
+      "id": "p20",
+      "original": "10. 我有觀 物有觀",
+      "ko": ""
+    },
+    {
+      "id": "p21",
+      "original": "",
+      "ko": "나도 있다고 보고 물건도 있다고 보는 것"
+    },
+    {
+      "id": "p22",
+      "original": "11. 自由觀 自用觀",
+      "ko": ""
+    },
+    {
+      "id": "p23",
+      "original": "",
+      "ko": "자유를 보고 자용을 보는 것"
+    },
+    {
+      "id": "p24",
+      "original": "12. 衆生觀 福祿觀",
+      "ko": ""
+    },
+    {
+      "id": "p25",
+      "original": "",
+      "ko": "중생을 보고 복록을 보는 것"
+    },
+    {
+      "id": "p26",
+      "original": "13. 世界觀 極樂觀",
+      "ko": ""
+    },
+    {
+      "id": "p27",
+      "original": "",
+      "ko": "세계를 보고 극락을 보는 것"
+    }
+  ]
+}
