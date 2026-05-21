@@ -672,6 +672,25 @@ export const BOOKS: Book[] = [
       { id: "c-all", number: "전권", title: "사회계약론 4권", count: 4 }
     ],
   },
+  {
+    id: "locke-two-treatises",
+    personaId: "locke",
+    title: { ko: "통치론", original: "Two Treatises of Government", en: "Two Treatises of Government" },
+    subtitle: "자연권·동의·저항권 — 자유주의의 시작 (제1통치론 354단락 국역 완료)",
+    author: "존 로크",
+    era: "1689",
+    language: "en",
+    hasTranslation: true,
+    license: "PD",
+    source: "Project Gutenberg pg7370",
+    tier: "free",
+    status: "available",
+    palette: "gold",
+    coverGlyph: "L",
+    chapters: [
+      { id: "c-1", number: "제1편", title: "제1통치론", count: 354 }
+    ],
+  },
 ];
 
 export function getBook(id: string): Book | undefined {
