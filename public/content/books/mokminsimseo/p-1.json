@@ -12,9 +12,18 @@
   "titleOriginal": "除拜",
   "originalLang": "한문",
   "originalLangCode": "hanja",
-  "originalLangs": [{ "code": "hanja", "label": "한문" }],
+  "originalLangs": [
+    {
+      "code": "hanja",
+      "label": "한문"
+    }
+  ],
   "sourceCredit": "한국고전번역원 (ITKC) · 공공누리 1유형",
-  "breadcrumb": ["목민심서", "제1편", "1조 · 제배"],
+  "breadcrumb": [
+    "목민심서",
+    "제1편",
+    "1조 · 제배"
+  ],
   "intro": "벼슬을 받는다는 것은 백성에게 자신을 빌려주는 것. 받기 전부터 새겨야 할 마음을 적었다.",
   "paragraphs": [
     {

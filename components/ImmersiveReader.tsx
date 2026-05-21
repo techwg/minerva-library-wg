@@ -86,6 +86,34 @@ function paginate<T>(items: T[], perPage: number): T[][] {
   return pages.length ? pages : [[]];
 }
 
+/**
+ * 글자 수 기반 페이지 분할 — paragraph 길이에 비례해 페이지를 채움.
+ * paginated 모드에서 짧은 paragraph가 많은 챕터의 빈 페이지 문제를 해결한다.
+ */
+type ParaItem = { id: string; original?: string; ko?: string; highlight?: boolean };
+function paginateByLength<T extends ParaItem>(items: T[], charBudget: number): T[][] {
+  const pages: T[][] = [];
+  let current: T[] = [];
+  let used = 0;
+  for (const item of items) {
+    const orig = (item.original ?? "").length;
+    const ko = (item.ko ?? "").length;
+    // 화면에 동시 노출되는 텍스트 양 추정: 한문+국문이 짝이면 둘 다 보이므로 합산.
+    const visible = orig && ko ? orig + ko : Math.max(orig, ko);
+    const cost = item.highlight ? Math.max(visible * 0.4, 40) : Math.max(visible, 1);
+    // 한 paragraph가 budget을 통째로 넘어도 단독 페이지로 들어가야 함
+    if (current.length > 0 && used + cost > charBudget) {
+      pages.push(current);
+      current = [];
+      used = 0;
+    }
+    current.push(item);
+    used += cost;
+  }
+  if (current.length) pages.push(current);
+  return pages.length ? pages : [[]];
+}
+
 const FOLIOS = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 function folio(n: number) {
   return FOLIOS[n] ?? `${n + 1}`;
@@ -181,8 +209,11 @@ export function ImmersiveReader(props: ImmersiveReaderProps) {
 
   // 페이지 당 단락 수 — 원문+국역 동시: 4, 국역만: 8, 원문만: 8
   // (빈 공간 줄이고 자주 안 넘기게)
-  const paragraphsPerPage = textView === "both" ? 4 : 8;
-  const pages = chapter ? paginate(chapter.paragraphs, paragraphsPerPage) : [];
+  // 글자 수 기반 페이지 분할. fontSize에 반비례하여 한 페이지가 담는 글자 수 조정.
+  // 기본 fontSize=19 기준 ~700자, 글자 클수록 줄어듦.
+  const charBudget = Math.round(13300 / fontSize); // 16→830, 19→700, 22→604, 26→511
+  const budget = textView === "both" ? charBudget : Math.round(charBudget * 1.4);
+  const pages = chapter ? paginateByLength(chapter.paragraphs, budget) : [];
   const totalPages = pages.length;
   const currentPageParagraphs = pages[pageIdx] ?? [];
   const palette = book.palette;

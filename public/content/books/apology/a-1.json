@@ -13,35 +13,45 @@
   "originalLang": "고대 그리스어",
   "originalLangCode": "greek",
   "originalLangs": [
-    { "code": "greek", "label": "Ἑλληνικά" },
-    { "code": "english", "label": "English" }
+    {
+      "code": "greek",
+      "label": "Ἑλληνικά"
+    },
+    {
+      "code": "english",
+      "label": "English"
+    }
   ],
   "sourceCredit": "Project Gutenberg · Burnet OCT (PD)",
   "englishCredit": "Benjamin Jowett tr., 1871 (PD)",
-  "breadcrumb": ["변론", "1막", "17a · 고발에 답하며"],
+  "breadcrumb": [
+    "변론",
+    "1막",
+    "17a · 고발에 답하며"
+  ],
   "intro": "사형을 앞둔 일흔의 철학자가 아테네 시민 500명 앞에서 시작하는 첫 마디.",
   "paragraphs": [
     {
-      "id": "a1",
+      "id": "p1",
       "original": "Ὅ τι μὲν ὑμεῖς, ὦ ἄνδρες Ἀθηναῖοι, πεπόνθατε ὑπὸ τῶν ἐμῶν κατηγόρων, οὐκ οἶδα·",
       "originalEn": "How you, O Athenians, have been affected by my accusers, I cannot tell;",
       "ko": "아테네 시민 여러분, 저를 고발한 자들의 말이 여러분에게 어떤 영향을 주었는지 저는 알지 못합니다.",
       "highlight": true
     },
     {
-      "id": "a2",
+      "id": "p2",
       "original": "ἐγὼ δ᾽ οὖν καὶ αὐτὸς ὑπ᾽ αὐτῶν ὀλίγου ἐμαυτοῦ ἐπελαθόμην, οὕτω πιθανῶς ἔλεγον.",
       "originalEn": "I myself was almost carried away by them — they spoke so persuasively.",
       "ko": "저 자신도 그들의 말을 듣고서 거의 제가 누구인지 잊을 뻔했습니다. 그만큼 설득력 있게 말하더군요."
     },
     {
-      "id": "a3",
+      "id": "p3",
       "original": "καίτοι ἀληθές γε, ὡς ἔπος εἰπεῖν, οὐδὲν εἰρήκασιν.",
       "originalEn": "And yet, hardly a word — or rather, not one word — of what they said was true.",
       "ko": "그런데 말이지요, 그들의 입에서 나온 것 중 진실은 단 한 마디도 없었습니다."
     },
     {
-      "id": "a4",
+      "id": "p4",
       "original": "μάλιστα δὲ αὐτῶν ἓν ἐθαύμασα τῶν πολλῶν ὧν ἐψεύσαντο: τοῦτο ἐν ᾧ ἔλεγον ὡς χρῆν ὑμᾶς εὐλαβεῖσθαι μὴ ὑπ᾽ ἐμοῦ ἐξαπατηθῆτε.",
       "originalEn": "Of the many falsehoods told by them, one most amazed me — that you should be on your guard not to be deceived by me, who am a master of words.",
       "ko": "그들이 늘어놓은 거짓 중에서도 한 가지는 정말 놀라웠습니다 — 제가 말솜씨로 여러분을 속일까 조심하라고 경고했다는 것입니다."
