@@ -2048,5 +2048,12 @@
     "completed_chunks": 14,
     "total_chunks": 14,
     "updated_at": "2026-05-22T03:16:24.673755"
-  }
+  },
+  "originalLangCode": "english",
+  "originalLangs": [
+    {
+      "code": "english",
+      "label": "영어"
+    }
+  ]
 }

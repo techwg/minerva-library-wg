@@ -35,7 +35,7 @@ function originalStyle(code: OrigLang, baseFs: number): React.CSSProperties {
     case "latin":
       return { ...base, fontFamily: "Cardo, 'EB Garamond', Georgia, serif", fontStyle: "italic", letterSpacing: "0.005em" };
     case "english":
-      return { ...base, fontFamily: "'EB Garamond', Georgia, serif", letterSpacing: "0.005em" };
+      return { ...base, fontFamily: "'EB Garamond', Georgia, serif", fontStyle: "italic", letterSpacing: "0.005em" };
     case "hanja":
     default:
       return { ...base, letterSpacing: "0.04em" };
