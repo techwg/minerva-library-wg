@@ -26,7 +26,7 @@ const PALETTE_STYLES = {
 export function BookSpine({ book, height = 200, compact = false, className }: BookSpineProps) {
   const p = PALETTE_STYLES[book.palette];
   const w = Math.round(height * (2 / 3));
-  const titleFs = Math.max(10, Math.round(w * 0.14));
+  const titleFs = Math.max(9, Math.round(w * 0.12));
   const authorFs = Math.max(8, Math.round(w * 0.09));
   const glyphFs = Math.round(w * 0.28);
 
@@ -73,7 +73,7 @@ export function BookSpine({ book, height = 200, compact = false, className }: Bo
         <>
           {/* 제목 */}
           <div
-            className="absolute overflow-hidden text-ellipsis whitespace-nowrap"
+            className="absolute"
             style={{
               top: "28%", left: "17%", right: "10%",
               fontSize: titleFs,
@@ -82,9 +82,13 @@ export function BookSpine({ book, height = 200, compact = false, className }: Bo
               color: p.accent,
               textShadow: "0 1px 0 rgba(0,0,0,.3)",
               lineHeight: 1.15,
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              display: "-webkit-box",
             }}
           >
-            {book.title.original || book.title.ko}
+            {book.title.ko || book.title.original}
           </div>
 
           {/* 저자 */}

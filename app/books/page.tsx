@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { LibHeader } from "@/components/LibHeader";
 import { LibFooter } from "@/components/LibFooter";
 import { BookSpine } from "@/components/BookSpine";
@@ -12,25 +13,74 @@ import type { Book, Sage } from "@/lib/types";
 
 type TraditionFilter = "all" | "eastern" | "western";
 type StatusFilter = "all" | "available" | "preparing";
+type PersonaFilter = "all" | string;
 
-export default function BooksPage() {
+const PERSONA_NAMES: Record<string, string> = {
+  all: "전체",
+  aristotle: "아리스토텔레스",
+  augustine: "아우구스티누스",
+  bentham: "벤담",
+  choejeu: "최제우",
+  confucius: "공자",
+  dasan: "다산 정약용",
+  gandhi: "간디",
+  hobbes: "홉스",
+  hume: "흄",
+  kant: "칸트",
+  locke: "로크",
+  marx: "마르크스",
+  mill: "밀",
+  nietzsche: "니체",
+  rousseau: "루소",
+  socrates: "소크라테스",
+  stoic: "마르쿠스 아우렐리우스",
+};
+
+function BooksPageInner() {
+  const searchParams = useSearchParams();
+  const initialPersona = searchParams.get("persona") ?? "all";
+
   const [tradition, setTradition] = useState<TraditionFilter>("all");
   const [status, setStatus] = useState<StatusFilter>("all");
+  const [persona, setPersona] = useState<PersonaFilter>(initialPersona);
+
+  // BOOKS에 실제로 존재하는 personaId만 추출 (등장 순서 유지)
+  const availablePersonas = useMemo(() => {
+    const seen = new Set<string>();
+    const result: string[] = [];
+    for (const b of BOOKS) {
+      if (!seen.has(b.personaId)) {
+        seen.add(b.personaId);
+        result.push(b.personaId);
+      }
+    }
+    return result;
+  }, []);
+
+  const personaOptions = useMemo(() => [
+    { id: "all", label: "전체" },
+    ...availablePersonas.map((id) => ({
+      id,
+      label: PERSONA_NAMES[id] ?? id,
+    })),
+  ], [availablePersonas]);
 
   const filtered = useMemo(() => {
     return BOOKS.filter((b) => {
       if (tradition === "eastern" && b.palette !== "vermilion") return false;
       if (tradition === "western" && b.palette !== "gold") return false;
       if (status !== "all" && b.status !== status) return false;
+      if (persona !== "all" && b.personaId !== persona) return false;
       return true;
     });
-  }, [tradition, status]);
+  }, [tradition, status, persona]);
 
   const availableCount = BOOKS.filter((b) => b.status === "available").length;
 
   return (
     <div className="min-h-screen" style={{ background: "var(--parchment-50)" }}>
       <LibHeader activeNav="books" />
+
 
       <main className="max-w-5xl mx-auto px-6 py-12">
         <div className="mb-8">
@@ -69,6 +119,13 @@ export default function BooksPage() {
             ] as { id: StatusFilter; label: string }[]}
             value={status}
             onChange={(v) => setStatus(v as StatusFilter)}
+          />
+          <FilterRow
+            label="현자"
+            options={personaOptions}
+            value={persona}
+            onChange={(v) => setPersona(v)}
+            wrap
           />
         </div>
 
@@ -117,20 +174,30 @@ export default function BooksPage() {
   );
 }
 
+export default function BooksPage() {
+  return (
+    <Suspense>
+      <BooksPageInner />
+    </Suspense>
+  );
+}
+
 function FilterRow<T extends string>({
   label,
   options,
   value,
   onChange,
+  wrap = false,
 }: {
   label: string;
   options: { id: T; label: string }[];
   value: T;
   onChange: (v: T) => void;
+  wrap?: boolean;
 }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="text-[10px] font-black uppercase tracking-widest text-ink-400 w-12 flex-shrink-0">
+    <div className={`flex gap-3 ${wrap ? "items-start" : "items-center"}`}>
+      <span className="text-[10px] font-black uppercase tracking-widest text-ink-400 w-12 flex-shrink-0 pt-1.5">
         {label}
       </span>
       <div className="flex flex-wrap gap-2">
