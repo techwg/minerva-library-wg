@@ -91,6 +91,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 현자별 탐색 */}
+      <PersonaBrowse />
+
       {/* 동양 고전 선반 */}
       <BookShelf title="동양 고전" books={eastern} />
 
@@ -246,6 +249,84 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
         {children}
       </span>
     </div>
+  );
+}
+
+const PERSONA_GLYPHS: Record<string, { glyph: string; color: string }> = {
+  aristotle: { glyph: "Α", color: "#2b2418" },
+  augustine: { glyph: "A", color: "#2b2418" },
+  bentham:   { glyph: "Β", color: "#2b2418" },
+  choejeu:   { glyph: "崔", color: "#842F14" },
+  confucius: { glyph: "論", color: "#842F14" },
+  dasan:     { glyph: "牧", color: "#842F14" },
+  gandhi:    { glyph: "G", color: "#2b2418" },
+  hobbes:    { glyph: "H", color: "#2b2418" },
+  hume:      { glyph: "H", color: "#2b2418" },
+  kant:      { glyph: "K", color: "#2b2418" },
+  locke:     { glyph: "L", color: "#2b2418" },
+  marx:      { glyph: "M", color: "#2b2418" },
+  mill:      { glyph: "M", color: "#2b2418" },
+  nietzsche: { glyph: "N", color: "#2b2418" },
+  rousseau:  { glyph: "R", color: "#2b2418" },
+  socrates:  { glyph: "Σ", color: "#2b2418" },
+  stoic:     { glyph: "V", color: "#2b2418" },
+};
+
+const PERSONA_NAMES: Record<string, string> = {
+  aristotle: "아리스토텔레스",
+  augustine: "아우구스티누스",
+  bentham:   "벤담",
+  choejeu:   "최제우",
+  confucius: "공자",
+  dasan:     "다산 정약용",
+  gandhi:    "간디",
+  hobbes:    "홉스",
+  hume:      "흄",
+  kant:      "칸트",
+  locke:     "로크",
+  marx:      "마르크스",
+  mill:      "밀",
+  nietzsche: "니체",
+  rousseau:  "루소",
+  socrates:  "소크라테스",
+  stoic:     "마르쿠스 아우렐리우스",
+};
+
+function PersonaBrowse() {
+  // BOOKS에서 personaId별 책 수 집계 (등장 순 유지)
+  const personaCounts = BOOKS.reduce<Record<string, number>>((acc, b) => {
+    acc[b.personaId] = (acc[b.personaId] ?? 0) + 1;
+    return acc;
+  }, {});
+  const personaIds = [...new Set(BOOKS.map((b) => b.personaId))];
+
+  return (
+    <section className="max-w-5xl mx-auto px-6 pb-12">
+      <SectionLabel>현자별 탐색</SectionLabel>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
+        {personaIds.map((id) => {
+          const meta = PERSONA_GLYPHS[id];
+          const name = PERSONA_NAMES[id] ?? id;
+          const count = personaCounts[id] ?? 0;
+          return (
+            <Link
+              key={id}
+              href={`/books?persona=${id}`}
+              className="flex flex-col items-center gap-1.5 p-3 rounded-xl border border-parchment-200 hover:border-parchment-300 hover:bg-parchment-50 transition-all text-center"
+            >
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-[15px] font-black text-white flex-shrink-0"
+                style={{ background: meta?.color ?? "#2b2418" }}
+              >
+                {meta?.glyph ?? id[0].toUpperCase()}
+              </div>
+              <div className="text-[11px] font-black text-ink-900 leading-tight">{name}</div>
+              <div className="text-[10px] text-ink-400 font-bold">{count}권</div>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
