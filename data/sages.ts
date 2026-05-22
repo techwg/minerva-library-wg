@@ -145,6 +145,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "K",
     portrait: "/portraits/kant.png",
   },
+  {
+    id: "aristotle",
+    name: { ko: "아리스토텔레스", en: "Aristotle" },
+    hanja: "Ἀριστοτέλης",
+    era: "기원전 384 ~ 322",
+    region: "그리스, 스타기라·아테네",
+    tradition: "western",
+    color: "#4A3318",
+    books: 2,
+    bookTitle: "니코마코스 윤리학 · 정치학",
+    blurb: "인간은 폴리스의 동물 — 행복은 덕에 따른 평생의 활동. 중용과 실천적 지혜의 스승.",
+    coverGlyph: "Α",
+    portrait: "/portraits/aristotle.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {

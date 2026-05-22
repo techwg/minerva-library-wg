@@ -171,6 +171,27 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "1864", title: "대구에서 처형", desc: "좌도난정(左道亂正)의 죄목" },
     ],
   },
+  aristotle: {
+    greatQuote: {
+      text: "인간은 본성상 폴리스의 동물이다.",
+      original: "ἄνθρωπος φύσει πολιτικὸν ζῷον",
+    },
+    coreTeachings: [
+      { glyph: "εὐ", label: "에우다이모니아", desc: "행복은 평생에 걸친 덕에 따른 영혼의 활동." },
+      { glyph: "μέσον", label: "중용", desc: "과도와 결핍 사이의 적절함. 상황적 중간." },
+      { glyph: "φρόν", label: "프로네시스", desc: "구체적 상황에서 옳음을 판단하는 실천적 지혜." },
+      { glyph: "πόλις", label: "폴리스적 동물", desc: "공동체 속에서만 완성되는 인간." },
+    ],
+    timeline: [
+      { year: "BC 384", title: "출생", desc: "마케도니아 스타기라" },
+      { year: "BC 367", title: "플라톤 아카데미아 입학", desc: "20년 수학" },
+      { year: "BC 347", title: "아테네 떠남", desc: "아소스·레스보스 연구" },
+      { year: "BC 343", title: "알렉산드로스 가정교사" },
+      { year: "BC 335", title: "리케이온 설립", desc: "페리파토스 학파" },
+      { year: "BC 323", title: "아테네 반마케도니아 정서", desc: "불경죄 기소" },
+      { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
+    ],
+  },
   kant: {
     greatQuote: {
       text: "너의 의지의 준칙이 항상 동시에 보편 법칙이 되도록 행위하라.",
