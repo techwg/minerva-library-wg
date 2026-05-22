@@ -131,6 +131,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "N",
     portrait: "/portraits/nietzsche.png",
   },
+  {
+    id: "kant",
+    name: { ko: "임마누엘 칸트", en: "Immanuel Kant" },
+    hanja: "Kant",
+    era: "1724 ~ 1804",
+    region: "프로이센, 쾨니히스베르크",
+    tradition: "western",
+    color: "#3A3A3A",
+    books: 3,
+    bookTitle: "도덕형이상학 정초 · 실천이성비판 · 영원한 평화를 위하여",
+    blurb: "너의 의지의 준칙이 보편 법칙이 되도록 행위하라 — 의무론과 자율 윤리의 정초자.",
+    coverGlyph: "K",
+    portrait: "/portraits/kant.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
