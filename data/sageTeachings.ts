@@ -192,6 +192,30 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  marx: {
+    greatQuote: {
+      text: "철학자들은 세계를 다양하게 해석해왔다. 중요한 것은 세계를 변혁하는 것이다.",
+      original: "Die Philosophen haben die Welt nur verschieden interpretiert; es kommt darauf an, sie zu verändern.",
+    },
+    coreTeachings: [
+      { glyph: "물질", label: "역사적 유물론", desc: "역사의 동력은 물질적 생산 양식. 하부구조가 상부구조를 규정한다." },
+      { glyph: "투쟁", label: "계급 투쟁", desc: "지금까지 모든 사회의 역사는 계급 투쟁의 역사다." },
+      { glyph: "잉여", label: "잉여가치", desc: "노동자가 노동력 가치 이상으로 만든 가치를 자본가가 가져간다." },
+      { glyph: "소외", label: "노동의 소외", desc: "생산물·노동행위·인간본질·타인으로부터의 4중 소외." },
+    ],
+    timeline: [
+      { year: "1818", title: "출생", desc: "프로이센 트리어" },
+      { year: "1841", title: "Jena University 박사" },
+      { year: "1843", title: "Jenny와 결혼·파리 이주" },
+      { year: "1844", title: "엥겔스 만남", desc: "평생의 동지" },
+      { year: "1845", title: "포이어바흐 테제·브뤼셀 망명" },
+      { year: "1848", title: "《공산당 선언》·1848 혁명" },
+      { year: "1849", title: "런던 영국 망명" },
+      { year: "1864", title: "제1인터내셔널 창립" },
+      { year: "1867", title: "《자본》 제1권 출판" },
+      { year: "1883", title: "별세", desc: "런던 Highgate, 무국적자로" },
+    ],
+  },
   stoic: {
     greatQuote: {
       text: "당장 이 세상을 떠날 사람처럼 모든 것을 행하고 말하고 생각하라.",
