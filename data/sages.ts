@@ -117,6 +117,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "東",
     portrait: "/portraits/choejeu.png",
   },
+  {
+    id: "nietzsche",
+    name: { ko: "프리드리히 니체", en: "Friedrich Nietzsche" },
+    hanja: "尼采",
+    era: "1844 ~ 1900",
+    region: "독일, 작센·바젤·토리노",
+    tradition: "western",
+    color: "#2B1810",
+    books: 3,
+    bookTitle: "차라투스트라는 이렇게 말했다 · 선악의 저편 · 도덕의 계보",
+    blurb: "신은 죽었다 — 망치를 든 철학자가 묻는다. 그대 자신의 가치를 입법할 수 있는가?",
+    coverGlyph: "N",
+    portrait: "/portraits/nietzsche.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {

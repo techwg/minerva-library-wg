@@ -35,6 +35,11 @@ export function AISidePanel({
   const bottomRef = useRef<HTMLDivElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
+  // 책이 바뀌면 그 책의 저자 페르소나로 자동 갱신 (사용자가 명시적으로 다른 페르소나를 고르기 전까지)
+  useEffect(() => {
+    setPersonaId(defaultPersonaId);
+  }, [defaultPersonaId]);
+
   const currentSage = SAGES.find((s) => s.id === personaId) ?? SAGES[0];
 
   useEffect(() => {
