@@ -89,9 +89,16 @@ function paginate<T>(items: T[], perPage: number): T[][] {
 /**
  * 글자 수 기반 페이지 분할 — paragraph 길이에 비례해 페이지를 채움.
  * paginated 모드에서 짧은 paragraph가 많은 챕터의 빈 페이지 문제를 해결한다.
+ *
+ * v2 (2026-05-22): minPerPage 보장 + budget 증가 — 짧은 paragraph 책(셰익스피어 등)
+ * 에서 페이지당 1~2개만 들어가던 문제 해결.
  */
 type ParaItem = { id: string; original?: string; ko?: string; highlight?: boolean };
-function paginateByLength<T extends ParaItem>(items: T[], charBudget: number): T[][] {
+function paginateByLength<T extends ParaItem>(
+  items: T[],
+  charBudget: number,
+  minPerPage: number = 5
+): T[][] {
   const pages: T[][] = [];
   let current: T[] = [];
   let used = 0;
@@ -101,8 +108,15 @@ function paginateByLength<T extends ParaItem>(items: T[], charBudget: number): T
     // 화면에 동시 노출되는 텍스트 양 추정: 한문+국문이 짝이면 둘 다 보이므로 합산.
     const visible = orig && ko ? orig + ko : Math.max(orig, ko);
     const cost = item.highlight ? Math.max(visible * 0.4, 40) : Math.max(visible, 1);
-    // 한 paragraph가 budget을 통째로 넘어도 단독 페이지로 들어가야 함
-    if (current.length > 0 && used + cost > charBudget) {
+    // 페이지에 최소 minPerPage 개 들어간 후 budget 초과시에만 끊음.
+    // 단, 거대한 paragraph 하나가 페이지를 다 차지하는 경우는 즉시 끊을 수 있도록 minPerPage 무시.
+    const oversizeFirst = current.length === 0 && cost > charBudget * 1.5;
+    if (
+      current.length > 0
+      && current.length >= minPerPage
+      && used + cost > charBudget
+      && !oversizeFirst
+    ) {
       pages.push(current);
       current = [];
       used = 0;
@@ -209,11 +223,14 @@ export function ImmersiveReader(props: ImmersiveReaderProps) {
 
   // 페이지 당 단락 수 — 원문+국역 동시: 4, 국역만: 8, 원문만: 8
   // (빈 공간 줄이고 자주 안 넘기게)
-  // 글자 수 기반 페이지 분할. fontSize에 반비례하여 한 페이지가 담는 글자 수 조정.
-  // 기본 fontSize=19 기준 ~700자, 글자 클수록 줄어듦.
-  const charBudget = Math.round(13300 / fontSize); // 16→830, 19→700, 22→604, 26→511
-  const budget = textView === "both" ? charBudget : Math.round(charBudget * 1.4);
-  const pages = chapter ? paginateByLength(chapter.paragraphs, budget) : [];
+  // 글자 수 기반 페이지 분할 (v2). 실측 결과 이전 budget이 작아 빈 페이지 빈번.
+  // 한 페이지 ~24줄·줄당 ~32자 = 약 770자 한국어 노출 가능. 한문 혼합 시 줄 수 늘어남.
+  // 7000자/fs² 계수: 16→27, 19→19, 22→14, 26→10 줄 가중치. 실제 페이지 budget은 ×80자.
+  const charBudget = Math.round(22000 / fontSize); // 16→1375, 19→1158, 22→1000, 26→846
+  const budget = textView === "both" ? charBudget : Math.round(charBudget * 1.3);
+  // 화면 폰트 클수록 페이지에 들어가는 paragraph 수 줄임.
+  const minPerPage = fontSize <= 19 ? 6 : 4;
+  const pages = chapter ? paginateByLength(chapter.paragraphs, budget, minPerPage) : [];
   const totalPages = pages.length;
   const currentPageParagraphs = pages[pageIdx] ?? [];
   const palette = book.palette;
