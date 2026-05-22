@@ -229,6 +229,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "M",
     portrait: "/portraits/marcus.png",
   },
+  {
+    id: "marx",
+    name: { ko: "카를 마르크스", en: "Karl Marx" },
+    hanja: "Marx",
+    era: "1818 ~ 1883",
+    region: "독일·프랑스·영국",
+    tradition: "western",
+    color: "#3A1F1F",
+    books: 1,
+    bookTitle: "공산당 선언",
+    blurb: "철학자들은 세계를 해석해왔다. 중요한 것은 세계를 변혁하는 것이다 — 역사적 유물론·계급투쟁·소외.",
+    coverGlyph: "Μ",
+    portrait: "/portraits/marx.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
