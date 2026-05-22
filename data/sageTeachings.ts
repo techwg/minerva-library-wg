@@ -192,6 +192,30 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  rousseau: {
+    greatQuote: {
+      text: "인간은 자유롭게 태어났으나 어디서나 사슬에 묶여 있다.",
+      original: "L'homme est né libre, et partout il est dans les fers.",
+    },
+    coreTeachings: [
+      { glyph: "자연", label: "자연 상태", desc: "문명 이전 인간은 고독·평화·자족했다. 사회가 그를 부패시켰다." },
+      { glyph: "일반의지", label: "일반의지", desc: "시민들의 공통 이익을 향한 의지. 다수의 의지가 아니다." },
+      { glyph: "에밀", label: "자연 교육", desc: "아이의 자연적 발달을 막지 않는 것이 교사의 첫 임무." },
+      { glyph: "동정심", label: "동정심(pitié)", desc: "이성에 앞선 도덕의 토대. 타자 고통에 대한 본능적 반응." },
+    ],
+    timeline: [
+      { year: "1712", title: "출생", desc: "제네바, 출산 9일 후 모친 사망" },
+      { year: "1728", title: "제네바 출분·가톨릭 개종" },
+      { year: "1742", title: "파리 진출", desc: "디드로 등과 교류" },
+      { year: "1749", title: "Vincennes의 계시", desc: "디드로 면회 중 디종 학술원 공모 발견" },
+      { year: "1750", title: "《학문예술론》", desc: "공모 당선·문학적 명성" },
+      { year: "1755", title: "《인간 불평등 기원론》" },
+      { year: "1762", title: "《사회계약론》·《에밀》", desc: "금서 처분·체포 영장·도망" },
+      { year: "1762-70", title: "스위스·영국·프랑스 망명" },
+      { year: "1770", title: "파리 귀환·《고백록》 낭독" },
+      { year: "1778", title: "별세", desc: "에르므농빌" },
+    ],
+  },
   locke: {
     greatQuote: {
       text: "법이 없는 곳에는 자유도 없다.",

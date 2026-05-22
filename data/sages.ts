@@ -187,6 +187,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "L",
     portrait: "/portraits/locke.png",
   },
+  {
+    id: "rousseau",
+    name: { ko: "장-자크 루소", en: "Jean-Jacques Rousseau" },
+    hanja: "Rousseau",
+    era: "1712 ~ 1778",
+    region: "제네바·프랑스",
+    tradition: "western",
+    color: "#56341F",
+    books: 1,
+    bookTitle: "사회계약론",
+    blurb: "인간은 자유롭게 태어났으나 어디서나 사슬에 묶여 있다 — 일반의지·자연 교육·낭만주의의 선구자.",
+    coverGlyph: "R",
+    portrait: "/portraits/rousseau.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
