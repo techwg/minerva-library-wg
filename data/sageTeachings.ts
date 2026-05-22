@@ -192,6 +192,32 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  mill: {
+    greatQuote: {
+      text: "만족한 바보보다 불만족한 소크라테스가 낫다.",
+      original: "It is better to be Socrates dissatisfied than a fool satisfied.",
+    },
+    coreTeachings: [
+      { glyph: "L", label: "해악 원리", desc: "자유는 타인에게 해를 끼치지 않는 범위에서만 제한 가능." },
+      { glyph: "Q", label: "질적 공리주의", desc: "쾌락은 양뿐 아니라 질에서 차이가 있다." },
+      { glyph: "♀=♂", label: "여성의 평등", desc: "양성의 법적 종속은 잘못이다." },
+      { glyph: "∞", label: "사상의 자유", desc: "검열은 인류의 사고 권리 자체를 빼앗는 일이다." },
+    ],
+    timeline: [
+      { year: "1806", title: "출생", desc: "런던 Pentonville. 아버지 James Mill의 실험적 교육" },
+      { year: "1823", title: "East India Company 입사", desc: "35년 근무" },
+      { year: "1826", title: "정신적 위기", desc: "Wordsworth 시로 회복" },
+      { year: "1843", title: "《논리학 체계》" },
+      { year: "1848", title: "《정치경제학 원리》" },
+      { year: "1851", title: "Harriet Taylor와 결혼" },
+      { year: "1858", title: "Harriet 사망 · East India Company 폐쇄" },
+      { year: "1859", title: "《자유론》" },
+      { year: "1861", title: "《공리주의》·《대의 정부론》" },
+      { year: "1865-68", title: "하원의원", desc: "여성 참정권 발의(1867)" },
+      { year: "1869", title: "《여성의 종속》" },
+      { year: "1873", title: "별세", desc: "아비뇽" },
+    ],
+  },
   kant: {
     greatQuote: {
       text: "너의 의지의 준칙이 항상 동시에 보편 법칙이 되도록 행위하라.",

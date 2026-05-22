@@ -159,6 +159,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "Α",
     portrait: "/portraits/aristotle.png",
   },
+  {
+    id: "mill",
+    name: { ko: "존 스튜어트 밀", en: "John Stuart Mill" },
+    hanja: "Mill",
+    era: "1806 ~ 1873",
+    region: "영국, 런던·아비뇽",
+    tradition: "western",
+    color: "#1F3A5F",
+    books: 2,
+    bookTitle: "자유론 · 공리주의",
+    blurb: "만족한 바보보다 불만족한 소크라테스가 낫다 — 자유주의·질적 공리주의·여성 평등의 선구자.",
+    coverGlyph: "M",
+    portrait: "/portraits/mill.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
