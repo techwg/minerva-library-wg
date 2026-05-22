@@ -171,6 +171,30 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "1864", title: "대구에서 처형", desc: "좌도난정(左道亂正)의 죄목" },
     ],
   },
+  kant: {
+    greatQuote: {
+      text: "너의 의지의 준칙이 항상 동시에 보편 법칙이 되도록 행위하라.",
+      original: "Handle so, dass die Maxime deines Willens jederzeit zugleich als Prinzip einer allgemeinen Gesetzgebung gelten könne.",
+    },
+    coreTeachings: [
+      { glyph: "Pflicht", label: "의무", desc: "도덕 법칙에 대한 존경에서 비롯된 행위의 필연성. 결과가 아닌 동기." },
+      { glyph: "K.I.", label: "정언명령", desc: "조건 없이 따라야 할 도덕 명령. 보편화 가능성·인간성 정식·자율성 정식." },
+      { glyph: "Würde", label: "인격·존엄성", desc: "인간을 수단이 아닌 목적으로. 가격 너머의 절대 가치." },
+      { glyph: "Autonomie", label: "자율", desc: "스스로 도덕 법칙을 부여하고 따름. 타율은 도덕이 아니다." },
+    ],
+    timeline: [
+      { year: "1724", title: "출생", desc: "프로이센 쾨니히스베르크 — 평생 떠나지 않은 도시" },
+      { year: "1755", title: "쾨니히스베르크 대학 사강사", desc: "자연철학·논리학·형이상학" },
+      { year: "1770", title: "정교수 임용", desc: "교수 취임 논문" },
+      { year: "1781", title: "《순수이성비판》", desc: "코페르니쿠스적 전회" },
+      { year: "1784", title: "《계몽이란 무엇인가에 대한 답변》", desc: "사페레 아우데(Sapere aude!)" },
+      { year: "1785", title: "《도덕형이상학 정초》", desc: "정언명령 3정식 제시" },
+      { year: "1788", title: "《실천이성비판》", desc: "도덕 법칙·자유" },
+      { year: "1790", title: "《판단력비판》", desc: "미·숭고·목적론" },
+      { year: "1795", title: "《영원한 평화를 위하여》", desc: "공화제·환대권·국제연맹" },
+      { year: "1804", title: "별세", desc: "쾨니히스베르크, 향년 79세" },
+    ],
+  },
   nietzsche: {
     greatQuote: {
       text: "인간은 극복되어야 할 무엇이다.",
