@@ -192,6 +192,30 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  toegye: {
+    greatQuote: {
+      text: "사단은 리(理)가 발하여 기(氣)가 따르고, 칠정은 기(氣)가 발하여 리(理)가 탄다.",
+      original: "四端理發而氣隨之 七情氣發而理乘之",
+    },
+    coreTeachings: [
+      { glyph: "敬", label: "경(敬)", desc: "마음을 한곳에 모아 흩어지지 않게 함. 수양의 핵심." },
+      { glyph: "理", label: "이기이원론·이발설", desc: "리(理)는 단지 원리가 아니라 자기 발동의 활동성을 가진다." },
+      { glyph: "四七", label: "사단칠정", desc: "도덕 정서(사단)와 일반 정서(칠정)의 발생 근원이 다르다." },
+      { glyph: "十圖", label: "성학십도", desc: "성인이 되는 학문의 길을 10개의 도설로 압축." },
+    ],
+    timeline: [
+      { year: "1501", title: "출생", desc: "경상도 예안 온계리, 부친 7개월 후 별세" },
+      { year: "1534", title: "문과 급제", desc: "34세" },
+      { year: "1545", title: "을사사화", desc: "형 이해 화·환멸·고향 은거 시작" },
+      { year: "1548-49", title: "단양·풍기군수", desc: "백운동서원 사액(소수서원) 청원" },
+      { year: "1556", title: "홍문관 부제학" },
+      { year: "1559-66", title: "사단칠정 논변", desc: "고봉 기대승과 8년 왕복 서신" },
+      { year: "1561", title: "도산서당 건립", desc: "도산서원의 시작" },
+      { year: "1568", title: "《성학십도》 진상", desc: "선조에게" },
+      { year: "1570", title: "별세", desc: "도산 한서암, 향년 70세" },
+      { year: "1610", title: "문묘 종사", desc: "광해군 2년" },
+    ],
+  },
   marx: {
     greatQuote: {
       text: "철학자들은 세계를 다양하게 해석해왔다. 중요한 것은 세계를 변혁하는 것이다.",
