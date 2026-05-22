@@ -192,6 +192,30 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  hume: {
+    greatQuote: {
+      text: "현명한 자는 증거에 비례해 신념을 조절한다.",
+      original: "A wise man proportions his belief to the evidence.",
+    },
+    coreTeachings: [
+      { glyph: "?", label: "인과 회의", desc: "우리는 인과적 필연성을 직접 관찰할 수 없다. 항상적 결합만 본다." },
+      { glyph: "is≠ought", label: "사실과 당위", desc: "'이다'에서 '해야 한다'를 도출할 수 없다." },
+      { glyph: "다발", label: "자아의 다발", desc: "자아는 결코 일정하지 않은 지각들의 다발이다." },
+      { glyph: "정념", label: "도덕감", desc: "이성은 정념의 노예다. 도덕의 토대는 공감(sympathy)." },
+    ],
+    timeline: [
+      { year: "1711", title: "출생", desc: "에든버러" },
+      { year: "1722", title: "Edinburgh University 입학", desc: "11세" },
+      { year: "1734-37", title: "La Flèche에서 《인성론》 집필" },
+      { year: "1739", title: "《인성론》 출판 실패", desc: "사산아처럼" },
+      { year: "1745", title: "Edinburgh 교수 임용 거절", desc: "무신론 의혹" },
+      { year: "1748", title: "《인간이해 탐구》" },
+      { year: "1751", title: "《도덕원리 탐구》" },
+      { year: "1754-62", title: "《영국사》 6권", desc: "베스트셀러" },
+      { year: "1763-65", title: "파리 대사관 비서·살롱의 총아" },
+      { year: "1776", title: "별세", desc: "에든버러" },
+    ],
+  },
   rousseau: {
     greatQuote: {
       text: "인간은 자유롭게 태어났으나 어디서나 사슬에 묶여 있다.",

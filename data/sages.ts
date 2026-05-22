@@ -201,6 +201,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "R",
     portrait: "/portraits/rousseau.png",
   },
+  {
+    id: "hume",
+    name: { ko: "데이비드 흄", en: "David Hume" },
+    hanja: "Hume",
+    era: "1711 ~ 1776",
+    region: "스코틀랜드, 에든버러",
+    tradition: "western",
+    color: "#2E4A52",
+    books: 1,
+    bookTitle: "도덕원리 탐구",
+    blurb: "현명한 자는 증거에 비례해 신념을 조절한다 — 경험주의 회의·인과 비판·도덕감 윤리.",
+    coverGlyph: "H",
+    portrait: "/portraits/hume.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
