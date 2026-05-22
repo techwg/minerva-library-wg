@@ -243,6 +243,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "Μ",
     portrait: "/portraits/marx.png",
   },
+  {
+    id: "toegye",
+    name: { ko: "퇴계 이황", en: "Yi Hwang (Toegye)" },
+    hanja: "退溪 李滉",
+    era: "1501 ~ 1570",
+    region: "조선, 안동 도산",
+    tradition: "eastern",
+    color: "#3D4A2E",
+    books: 1,
+    bookTitle: "퇴계전서 (성학십도 외)",
+    blurb: "리(理)는 발하고 기(氣)는 따른다 — 동방의 주자, 사단칠정 논변과 성학십도의 스승.",
+    coverGlyph: "退",
+    portrait: "/portraits/toegye.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
