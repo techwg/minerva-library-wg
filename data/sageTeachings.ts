@@ -153,6 +153,48 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "1855", title: "별세", desc: "코펜하겐" },
     ],
   },
+  choejeu: {
+    greatQuote: {
+      text: "사람이 곧 한울님이다.",
+      original: "人乃天",
+    },
+    coreTeachings: [
+      { glyph: "侍", label: "시천주", desc: "모든 사람 안에 한울님이 모셔져 있다." },
+      { glyph: "人乃天", label: "인내천", desc: "사람이 곧 한울. 신분·계급·성별을 넘어선 평등." },
+      { glyph: "開闢", label: "후천개벽", desc: "낡은 세상은 다하고 새 세상이 열린다." },
+      { glyph: "守心", label: "수심정기", desc: "마음을 지키고 기운을 바르게 한다." },
+    ],
+    timeline: [
+      { year: "1824", title: "출생", desc: "경주 가정리" },
+      { year: "1860", title: "용담에서 결정적 종교 체험", desc: "동학 창도" },
+      { year: "1861", title: "《포덕문》 저술" },
+      { year: "1864", title: "대구에서 처형", desc: "좌도난정(左道亂正)의 죄목" },
+    ],
+  },
+  nietzsche: {
+    greatQuote: {
+      text: "인간은 극복되어야 할 무엇이다.",
+      original: "Der Mensch ist etwas, das überwunden werden soll.",
+    },
+    coreTeachings: [
+      { glyph: "Ü", label: "위버멘쉬", desc: "기존 도덕을 초극하고 스스로 가치를 입법하는 자." },
+      { glyph: "∞", label: "영원회귀", desc: "이 삶이 무수히 반복되어도 그대로 원할 수 있는가." },
+      { glyph: "M", label: "권력에의 의지", desc: "지배가 아니라 저항을 극복하고 자기를 확장하는 충동." },
+      { glyph: "G†", label: "가치 재평가", desc: "신은 죽었다. 이제 누가 새 가치를 입법할 것인가." },
+    ],
+    timeline: [
+      { year: "1844", title: "출생", desc: "프로이센 작센 Röcken, 루터교 목사의 아들" },
+      { year: "1869", title: "Basel 대학 고전문헌학 정교수", desc: "24세, 역사상 최연소" },
+      { year: "1872", title: "《비극의 탄생》", desc: "Wagner에게 헌정" },
+      { year: "1879", title: "Basel 사직", desc: "건강 악화, 방랑·집필 시기 시작" },
+      { year: "1882", title: "Lou Salomé 청혼 거절", desc: "이후 《차라투스트라》 집필" },
+      { year: "1883-85", title: "《차라투스트라는 이렇게 말했다》" },
+      { year: "1886", title: "《선악의 저편》" },
+      { year: "1887", title: "《도덕의 계보》" },
+      { year: "1889", title: "Turin 정신 붕괴", desc: "1월 3일, 채찍 맞는 말을 끌어안고" },
+      { year: "1900", title: "별세", desc: "Weimar, 향년 55세" },
+    ],
+  },
 };
 
 export function getSageTeachings(personaId: string): SageTeachings | undefined {
