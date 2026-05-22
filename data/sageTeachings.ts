@@ -192,6 +192,28 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  locke: {
+    greatQuote: {
+      text: "법이 없는 곳에는 자유도 없다.",
+      original: "Where there is no Law, there is no Freedom.",
+    },
+    coreTeachings: [
+      { glyph: "권리", label: "자연권", desc: "생명·자유·재산은 양도 불가능한 권리." },
+      { glyph: "동의", label: "사회계약", desc: "정부의 정당성은 피치자의 동의에서 온다." },
+      { glyph: "저항", label: "저항권", desc: "정부가 신탁을 위반하면 인민은 저항할 권리가 있다." },
+      { glyph: "관용", label: "관용·정교분리", desc: "신앙은 강제될 수 없다. 국가와 교회는 분리되어야 한다." },
+    ],
+    timeline: [
+      { year: "1632", title: "출생", desc: "잉글랜드 서머셋 Wrington" },
+      { year: "1652", title: "Oxford Christ Church 입학" },
+      { year: "1666", title: "Shaftesbury 백작과 만남", desc: "평생의 후원자·정치 동료" },
+      { year: "1683", title: "네덜란드 망명", desc: "Charles II 박해를 피해" },
+      { year: "1689", title: "귀국·《통치론》·《인간지성론》·《관용론》 출판" },
+      { year: "1690", title: "《통치론》 정식 출간", desc: "익명" },
+      { year: "1696", title: "Board of Trade 위원" },
+      { year: "1704", title: "별세", desc: "에식스 High Laver" },
+    ],
+  },
   mill: {
     greatQuote: {
       text: "만족한 바보보다 불만족한 소크라테스가 낫다.",

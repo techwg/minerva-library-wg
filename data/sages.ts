@@ -173,6 +173,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "M",
     portrait: "/portraits/mill.png",
   },
+  {
+    id: "locke",
+    name: { ko: "존 로크", en: "John Locke" },
+    hanja: "Locke",
+    era: "1632 ~ 1704",
+    region: "영국, 서머셋·옥스퍼드·네덜란드",
+    tradition: "western",
+    color: "#3D5C2E",
+    books: 1,
+    bookTitle: "통치론",
+    blurb: "정부는 동의에서 비롯되고, 동의 없는 권력은 폭정이다 — 자유주의 정치철학과 경험주의의 정초자.",
+    coverGlyph: "L",
+    portrait: "/portraits/locke.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
