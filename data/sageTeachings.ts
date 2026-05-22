@@ -192,6 +192,28 @@ export const SAGE_TEACHINGS: Record<string, SageTeachings> = {
       { year: "BC 322", title: "별세", desc: "에우보이아 칼키스" },
     ],
   },
+  stoic: {
+    greatQuote: {
+      text: "당장 이 세상을 떠날 사람처럼 모든 것을 행하고 말하고 생각하라.",
+      original: "ὡς ἤδη ἀπιὼν τοῦ βίου ἕκαστα πράττειν καὶ λέγειν καὶ διανοεῖσθαι.",
+    },
+    coreTeachings: [
+      { glyph: "분리", label: "통제의 이분법", desc: "내 영역(판단·의지)과 외부의 영역을 분리하라. 행복은 전자에만." },
+      { glyph: "now", label: "현재", desc: "과거는 잃었고 미래는 모른다. 그대가 가진 것은 이 순간뿐이다." },
+      { glyph: "death", label: "죽음의 명상", desc: "당장 떠날 사람처럼 행하라. 사소한 것에 매몰되지 말라." },
+      { glyph: "logos", label: "이성·자연과의 일치", desc: "분노한 자도 같은 이성의 동족이다. 우주의 한 몸." },
+    ],
+    timeline: [
+      { year: "121", title: "출생", desc: "로마" },
+      { year: "138", title: "안토니누스 피우스 입양·차기 황제 지명" },
+      { year: "161", title: "황제 즉위", desc: "공동 황제 루키우스 베루스와 함께" },
+      { year: "165-180", title: "안토니우스 역병", desc: "제국 인구 10-30% 사망" },
+      { year: "166-180", title: "마르코만니 전쟁", desc: "도나우 군영 생활" },
+      { year: "170년대", title: "《명상록》 집필", desc: "군영에서 그리스어로 자기에게" },
+      { year: "175", title: "카시우스 반란 진압" },
+      { year: "180", title: "별세", desc: "빈도보나(빈)" },
+    ],
+  },
   hume: {
     greatQuote: {
       text: "현명한 자는 증거에 비례해 신념을 조절한다.",

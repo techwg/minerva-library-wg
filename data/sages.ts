@@ -215,6 +215,20 @@ export const SAGES: Sage[] = [
     coverGlyph: "H",
     portrait: "/portraits/hume.png",
   },
+  {
+    id: "stoic",
+    name: { ko: "마르쿠스 아우렐리우스", en: "Marcus Aurelius" },
+    hanja: "Aurelius",
+    era: "121 ~ 180",
+    region: "로마 제국, 빈도보나",
+    tradition: "western",
+    color: "#3A2D1F",
+    books: 1,
+    bookTitle: "명상록 (Τὰ εἰς ἑαυτόν)",
+    blurb: "당장 이 세상을 떠날 사람처럼 행하라 — 황제이자 스토아 철학자가 군영에서 자신에게 쓴 일기.",
+    coverGlyph: "M",
+    portrait: "/portraits/marcus.png",
+  },
 ];
 
 export function getSage(id: string): Sage | undefined {
